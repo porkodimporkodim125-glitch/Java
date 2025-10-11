@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main {
+public static double calculateGrossSalary(double basic) {
+        double hra, da;
+    if (basic < 15000) {
+            hra = 0.15 * basic;
+            da = 0.90 * basic;
+        } else {
+            hra = 5000;
+            da = 0.98 * basic;
+        }
+    return basic + hra + da;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double basic = sc.nextDouble();
+        double gross = calculateGrossSalary(basic);
+        System.out.printf("%.2f",gross);
+        sc.close();
+    }
+}
